@@ -1,0 +1,1 @@
+require.config({paths:{app:"app/app",noget:"node_modules/noget/noget",supreme:"node_modules/noget/supreme",jquery:"node_modules/jquery/dist/jquery.min",moment:"node_modules/moment/moment"}}),require(["app"]);
