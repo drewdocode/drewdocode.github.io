@@ -7,6 +7,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     $('#hour').hide().fadeIn(1000);
     $('#minute').hide().fadeIn(2000);
     $('#second').hide().fadeIn(3000);
+    $('#millisecond').hide().fadeIn(1000);
 
     var timeClock = function () {
         $('#time').text(moment().format('H:mm:ss.SSS'));
@@ -30,7 +31,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
         unit = time.format("s");
         $('#second').html(noget.translate(unit)).attr('title', unit);
 
-        unit = time.format("S");
+        unit = time.format("SSS");
         $('#millisecond').html(noget.translate(unit)).attr('title', unit);
 
     }
