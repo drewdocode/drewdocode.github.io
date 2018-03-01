@@ -11,6 +11,10 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 
     var timeClock = function () {
         $('#time').text(moment().format('H:mm:ss.SSS'));
+        var time = moment($('#time').text(), "H:mm:ss.SSS");
+        
+        var unit = time.format("SSS");
+        $('#millisecond').html(noget.translate(unit)).attr('title', unit);
     }
 
     var mathClock = function () {
@@ -30,9 +34,6 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 
         unit = time.format("s");
         $('#second').html(noget.translate(unit)).attr('title', unit);
-
-        unit = time.format("SSS");
-        $('#millisecond').html(noget.translate(unit)).attr('title', unit);
 
     }
 
