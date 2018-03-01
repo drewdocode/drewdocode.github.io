@@ -32,7 +32,7 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     clock();
     
 //    setInterval(clock, 1000);
-    setInterval(clock, 100);
+    setInterval(clock, 500);
     
 });
 
