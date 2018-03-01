@@ -10,38 +10,121 @@
 
 <body>
 
-    <div id="main_container" class="container">
+<!--<div id="nav_container" class="container-fluid">-->
+    <!--<nav class="navbar fixed-top navbar-inverse bg-inverse">-->
+    <!---->
+        <!--<ul class="nav justify-content-center">-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link disabled" href="#todaysmathRow">Math</a> &lt;!&ndash; go to todays math &ndash;&gt;-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link active" href="#overstandingRow">Overstanding</a> &lt;!&ndash; go to todays math definitions &ndash;&gt;-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="#buildRow">Build</a> &lt;!&ndash; go to where user can enter text and tweet/email their build on &ndash;&gt;-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="#studyRow">Study</a> &lt;!&ndash; go to alphanumeric short and long reference &ndash;&gt;-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</nav>-->
+<!--</div>-->
+
+    <div id="main_container" class="container-fluid">
 
 
-        <div class="row">
-
+        <div id="dateRow" class="row">
             <div class="centered col-md">
-                <h1 id="date_alphanumeric" class="sourceText">
+                <h1 id="date" class="date">
+                    M.D.YYYY
                 </h1>
+                <span id="time" class="time">
+                    H:mm:ss
+                </span>
             </div>
-
         </div>
 
         <hr>
 
-        <div class="row">
+        <div id="todaysmathRow" class="row">
             <div class="centered col-md">
-                <!-- <h2><a class="badge badge-success" href="https://twitter.com/hashtag/todaysmath?f=tweets&vertical=default&src=hash">Today's Math</a></h2> -->
-
-                <h2 id="supreme_translation" class="translation">
+                <h2 id="todaysmath" class="translation">
                 </h2>
+           </div>
+        </div>
 
-                <hr>
+        <hr>
 
-                <h2 id="supreme_translation_long_form" class="translation">
-                </h2>
-                    
+        <div id="hourRow" class="row">
+            <div class="centered col-sm">
+                <h3 id="hour" class="translation">
+                </h3>
+            </div>
+            <div class="centered col-sm">
+                <h3 id="minute" class="translation">
+                </h3>
+            </div>
+            <div class="centered col-sm">
+                <h3 id="second" class="translation">
+                </h3>
             </div>
         </div>
 
 
-    </div>
-    <!-- main_container -->
+
+
+        <!--<div id="hourRow" class="row">-->
+            <!--<div class="centered col-md">-->
+                <!--<h2 id="hour" class="translation">-->
+                <!--</h2>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<hr>-->
+
+        <!--<div id="minuteRow" class="row">-->
+            <!--<div class="centered col-md">-->
+                <!--<h2 id="minute" class="translation">-->
+                <!--</h2>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<hr>-->
+
+        <!--<div id="secondRow" class="row">-->
+            <!--<div class="centered col-md">-->
+                <!--<h2 id="second" class="translation">-->
+                <!--</h2>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<hr>-->
+
+        <div id="overstandingRow" class="block"></div>
+        <div class="row">
+            <div class="centered col-md">
+                <h2 id="overstanding" class="translation">Overstanding</h2>
+            </div>
+        </div>
+
+        <div id="buildRow" class="block"></div>
+        <div class="row">
+            <div class="centered col-md">
+                <h2 id="build" class="translation">Build</h2>
+            </div>
+        </div>
+
+        <div id="studyRow" class="block"></div>
+        <div class="row">
+            <div class="centered col-md">
+                <h2 id="study" class="translation">Study</h2>
+            </div>
+        </div>
+
+
+
+    </div><!-- main_container -->
+
 
     <script data-main="index.js" src="node_modules/requirejs/require.js"></script>
 
