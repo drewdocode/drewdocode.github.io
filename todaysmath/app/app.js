@@ -1,7 +1,7 @@
 define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 
     $('#date').text(moment().format('M.D.YYYY'));
-    $('#time').text(moment().format('H:mm:ss'));
+    $('#time').text(moment().format('H:mm:ss,SSS'));
 
     $('#todaysmath').hide().fadeIn(300);
     $('#hour').hide().fadeIn(1000);
@@ -10,8 +10,9 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 
     var clock = function () {
 
-        $('#time').text(moment().format('H:mm:ss'));
-        var time = moment($('#time').text(), "H.mm.ss");
+        $('#date').text(moment().format('M.D.YYYY'));
+        $('#time').text(moment().format('H:mm:ss,SSS'));
+        var time = moment($('#time').text(), "H.mm.ss,SSS");
         var unit = 0;
 
         unit = moment().format('D')
