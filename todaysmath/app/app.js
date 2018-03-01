@@ -8,10 +8,13 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
     $('#minute').hide().fadeIn(2000);
     $('#second').hide().fadeIn(3000);
 
-    var clock = function () {
+    var timeClock = function () {
+        $('#time').text(moment().format('H:mm:ss.SSS'));
+    }
+
+    var mathClock = function () {
 
         $('#date').text(moment().format('M.D.YYYY'));
-        $('#time').text(moment().format('H:mm:ss.SSS'));
         var time = moment($('#time').text(), "H:mm:ss.SSS");
         var unit = 0;
 
@@ -27,10 +30,15 @@ define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
         unit = time.format("s");
         $('#second').html(noget.translate(unit)).attr('title', unit);
 
+        unit = time.format("S");
+        $('#millisecond').html(noget.translate(unit)).attr('title', unit);
+
     }
 
-    clock();    
-    setInterval(clock, 300);
+    timeClock();    
+    mathClock();    
+    setInterval(timeClock, 100);
+    setInterval(mathClock, 1000);
     
 });
 
