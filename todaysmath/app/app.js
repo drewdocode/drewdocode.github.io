@@ -1,8 +1,5 @@
 define(['jquery', 'moment', 'noget'], function ($, moment, noget) {
 
-//     $('#date').text(moment().format('M.D.YYYY'));
-//     $('#time').text(moment().format('H:mm:ss.SSS'));
-
     $('#todaysmath').hide().fadeIn(300);
     $('#hour').hide().fadeIn(1000);
     $('#minute').hide().fadeIn(2000);
